@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 通过xml 配置好像有点问题。弃用，暂时使用config文件的配置方式-->
+
+    <!--<context:property-placeholder location="classpath*:jsonrpc.properties" />-->
+
+
+    <!--<bean class="com.googlecode.jsonrpc4j.spring.JsonProxyFactoryBean">-->
+        <!--<property name="serviceUrl" value="${jsonrpc.server.host}/UserService.json"/>-->
+        <!--<property name="serviceInterface" value="com.zhaoshg.rpc.servicevice.UserService"/>-->
+    <!--</bean>-->
+
+
+
+    <bean class="com.googlecode.jsonrpc4j.spring.AutoJsonRpcClientProxyCreator">
+        <property name="baseUrl" value="http://127.0.0.1:8080/" />
+        <property name="scanPackage" value="com.zhaoshg.rpc.service" />
+    </bean>
+
+</beans>
