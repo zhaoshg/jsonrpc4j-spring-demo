@@ -15,19 +15,16 @@
 
 </body>
 <script language="JavaScript">
-        function getmethod() {
+    params = {"userName":"zhaoshg"};
+
+    function getmethod() {
             $.ajax({
-                type: 'get', //if get return 32602  ,if post return 32700
+                type: 'get', // if post return 32700
                 url: "/userService",
                 contentType: "application/json; charset=utf-8",
-                data: {
-                    "jsonrpc": "2.0",
-                    "method": "getUserByUsername",
-                    "id": 2,
-                    "params": ["zhaoshg"]
-                },
+                data: {"jsonrpc":"2.0", "params":JSON.stringify(params), "id":"101", "method":"getUserByUsername"},
                 success: function (res) {
-                    alert(res);
+                    alert(res.result.username);
                 },
                 error:function(XMLHttpRequest, textStatus){
                     alert(XMLHttpRequest.responseText);  //XMLHttpRequest.responseText    XMLHttpRequest.status   XMLHttpRequest.readyState
@@ -37,17 +34,16 @@
             });
         }
 
+
+
+
         function postmethod() {
+
             $.ajax({
-                type: 'post', //if get return 32602  ,if post return 32700
+                type: 'post',
                 url: "/userService",
-                contentType: "application/json; charset=utf-8",
-                data: {
-                    "jsonrpc": "2.0",
-                    "method": "getUserByUsername",
-                    "id": 2,
-                    "params": ["zhaoshg"]
-                },
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                data: {"jsonrpc":"2.0", "params":JSON.stringify(params), "id":"102", "method":"getUserByUsername"},
                 success: function (res) {
                     alert(res);
                 },
