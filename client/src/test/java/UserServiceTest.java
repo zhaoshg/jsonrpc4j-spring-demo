@@ -21,9 +21,11 @@ public class UserServiceTest extends AbstractJUnit4SpringContextTests {
 
     @Test
     public void testService(){
+        User user1 = userService.getUserByUsername("zhaoshg");
+        System.out.println(user1);
 
-        User user = userService.getUserByUsername("zhaoshg");
-        Assert.assertEquals("Alex",user.getNickName());
+        User user = userService.test();
+        Assert.assertEquals("中文名",user.getNickName());
         Boolean res = otherService.otherMethod();
         Assert.assertTrue(res);
     }
