@@ -22,9 +22,9 @@
                 type: 'get', // if post return 32700
                 url: "/userService",
                 contentType: "application/json; charset=utf-8",
-                data: {"jsonrpc":"2.0", "params":JSON.stringify(params), "id":"101", "method":"getUserByUsername"},
+                data: {"jsonrpc":"2.0", "params":JSON.stringify(params), "id":"1089", "method":"getUserByUsername"},
                 success: function (res) {
-                    alert(res.result.username);
+                    alert(res.result.nickName);
                 },
                 error:function(XMLHttpRequest, textStatus){
                     alert(XMLHttpRequest.responseText);  //XMLHttpRequest.responseText    XMLHttpRequest.status   XMLHttpRequest.readyState
@@ -35,23 +35,21 @@
         }
 
 
-
-
         function postmethod() {
 
             $.ajax({
                 type: 'post',
                 url: "/userService",
-                contentType: "application/x-www-form-urlencoded; charset=utf-8",
-                data: {"jsonrpc":"2.0", "params":JSON.stringify(params), "id":"102", "method":"getUserByUsername"},
+                contentType: "application/json",
+                // cacheControl:"no-cache",
+                dataType:"json",
+                data: {"jsonrpc":"2.0", "id":"102", "method":"test"},
                 success: function (res) {
-                    alert(res);
+                    alert(res.result.username);
                 },
                 error:function(XMLHttpRequest, textStatus){
-                    alert(XMLHttpRequest.responseText);  //XMLHttpRequest.responseText    XMLHttpRequest.status   XMLHttpRequest.readyState
+                    alert(XMLHttpRequest.responseText);
                 }
-
-
             });
         }
 </script>

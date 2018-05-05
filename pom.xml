@@ -15,6 +15,7 @@
         <module>api</module>
         <module>server</module>
         <module>client</module>
+        <module>jsonrpc4j</module>
     </modules>
 
     <properties>
@@ -42,7 +43,7 @@
                 <version>${version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.briandilley.jsonrpc4j</groupId>
+                <groupId>com.github.zhaoshg</groupId>
                 <artifactId>jsonrpc4j</artifactId>
                 <version>${jsonrpc4j.verson}</version>
             </dependency>
