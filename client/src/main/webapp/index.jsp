@@ -20,7 +20,7 @@
     function getmethod() {
         $.ajax({
             type: 'get', // if post return 32700
-            url: "/userService",
+            url: "http://127.0.0.1:8080/userService",
             contentType: "application/json; charset=utf-8",
             traditional: true,
             //JSON.stringify is important,otherwise your servlet will throw 32602 error。
@@ -40,7 +40,7 @@
 
     function postmethod() {
         $.ajax({
-            url: '/userService',
+            url: 'http://127.0.0.1:8080/userService',
             type: 'POST',
             contentType: 'application/json; charset=utf-8',
             traditional: true,

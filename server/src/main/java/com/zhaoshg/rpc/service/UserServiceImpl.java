@@ -10,15 +10,14 @@ public class UserServiceImpl implements UserService {
     public User getUserByUsername(String userName) {
         if(userName == null)
             return null;
-        User user = new User();
-        user.setId(1L);
-        user.setUsername("zhaoshg");
-        user.setNickName("中文名");
-        user.setLastLoginTime(new Date());
-        return user;
+        return newUser();
     }
 
     public User test() {
+        return newUser();
+    }
+
+    private User newUser() {
         User user = new User();
         user.setId(1L);
         user.setUsername("zhaoshg");

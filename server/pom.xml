@@ -22,7 +22,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.zhaoshg</groupId>
+            <groupId>com.github.briandilley.jsonrpc4j</groupId>
             <artifactId>jsonrpc4j</artifactId>
         </dependency>
         <dependency>
@@ -32,6 +32,11 @@
         <dependency>
             <groupId>com.github.zhaoshg</groupId>
             <artifactId>demo-jsonrpc-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.thetransactioncompany</groupId>
+            <artifactId>cors-filter</artifactId>
+            <version>2.6</version>
         </dependency>
     </dependencies>
 
