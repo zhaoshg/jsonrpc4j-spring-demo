@@ -3,7 +3,7 @@
 
 ## 1. Jsonrpc4j + springFramework
 
-##v2.Auto Discovery With Annotations 
+## 2.Auto Discovery With Annotations 
 
 ## 3.Use CORS to solve cross-domain problem. 
 
